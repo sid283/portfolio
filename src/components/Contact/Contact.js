@@ -103,13 +103,13 @@ const Contact = forwardRef((props, ref) => {
         </form>
 
         <div className="social-links">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/sid283" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/siddalinga" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="mailto:your.email@example.com">
+          <a href="mailto:siddaling.gkoudi@gmail.com">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>
