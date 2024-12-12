@@ -43,9 +43,9 @@ const Experience = forwardRef((props, ref) => {
       duration: "2024 - Present",
       location: "Bengaluru, India",
       responsibilities: [
-        "Developing and maintaining core web applications using React.js",
+        "Developing and maintaining web applications for Ads pod",
         "Optimizing application performance and user experience",
-        "Collaborating with cross-functional teams to implement new features",
+        "Developing creatives for user engagement ads",
         "Writing clean, maintainable, and well-documented code"
       ],
       technologies: ["Vue.js", "JavaScript", "HTML/CSS","SASS"]
