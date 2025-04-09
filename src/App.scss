@@ -6,7 +6,12 @@
 } 
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none !important; /* Safari */
+  -ms-user-select: none !important; /* IE 10 and IE 11 */
+  user-select: none !important; /* Standard syntax */
+  -webkit-tap-highlight-color: transparent; /* for removing the highlight */
+
 }

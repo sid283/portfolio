@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   // Add safe area padding for mobile devices
   padding-top: max(1rem, env(safe-area-inset-top));
-  
+
   h1 {
     font-size: 4rem;
     margin: 0;
@@ -16,7 +16,7 @@
     -webkit-text-fill-color: transparent;
     margin-top: 60px;
   }
-  
+
   h2 {
     font-size: 2.5rem;
     color: #8892b0;
@@ -31,7 +31,7 @@
 
 .tech-stack {
   margin-top: 2rem;
-  
+
   p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -43,7 +43,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    
+
     span {
       display: flex;
       align-items: center;
@@ -54,31 +54,33 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
       cursor: pointer;
-      
+
       // Icon styling
-      svg, img {
+      svg,
+      img {
         width: 1.5em;
         height: 1.5em;
         margin-right: 0.7rem;
         transition: all 0.3s ease;
       }
-      
+
       // Text styling
       font-size: 0.9rem;
       font-weight: 500;
       color: #e0e0e0;
-      
+
       // Hover effects
       &:hover {
         transform: translateY(-3px);
         background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        
-        svg, img {
+
+        svg,
+        img {
           transform: scale(1.15);
         }
       }
-      
+
       // Active state
       &:active {
         transform: translateY(-1px);
@@ -89,35 +91,65 @@
 
 // Add specific colors for different tech icons
 .tech-icons span {
-  &:nth-child(1) { // React
-    svg { color: #61DAFB; }
+  &:nth-child(1) {
+    // React
+    svg {
+      color: #61dafb;
+    }
   }
-  &:nth-child(2) { // Next.js
-    img { filter: brightness(0.9); }
+  &:nth-child(2) {
+    // Next.js
+    img {
+      filter: brightness(0.9);
+    }
   }
-  &:nth-child(3) { // JavaScript
-    svg { color: #F7DF1E; }
+  &:nth-child(3) {
+    // JavaScript
+    svg {
+      color: #f7df1e;
+    }
   }
-  &:nth-child(4) { // HTML
-    svg { color: #E34F26; }
+  &:nth-child(4) {
+    // HTML
+    svg {
+      color: #e34f26;
+    }
   }
-  &:nth-child(5) { // CSS
-    svg { color: #1572B6; }
+  &:nth-child(5) {
+    // CSS
+    svg {
+      color: #1572b6;
+    }
   }
-  &:nth-child(6) { // SCSS
-    svg { color: #CC6699; }
+  &:nth-child(6) {
+    // SCSS
+    svg {
+      color: #cc6699;
+    }
   }
-  &:nth-child(7) { // React Native
-    svg { color: #61DAFB; }
+  &:nth-child(7) {
+    // React Native
+    svg {
+      color: #61dafb;
+    }
   }
-  &:nth-child(8) { // Redux
-    img { filter: brightness(0.9); }
+  &:nth-child(8) {
+    // Redux
+    img {
+      filter: brightness(0.9);
+    }
   }
-  &:nth-child(9) { // TypeScript
-    img { filter: brightness(1.1); }
+  &:nth-child(9) {
+    // TypeScript
+    img {
+      filter: brightness(1.1);
+    }
   }
-  &:nth-child(10) { // Git
-    svg { color: #F05032; }
+  &:nth-child(10) {
+    // Git
+    svg {
+      color: #f05032;
+    }
   }
 }
 
@@ -126,12 +158,13 @@
   .tech-stack {
     .tech-icons {
       gap: 0.8rem;
-      
+
       span {
         padding: 0.6rem 1rem;
         font-size: 0.8rem;
-        
-        svg, img {
+
+        svg,
+        img {
           width: 1.2em;
           height: 1.2em;
           margin-right: 0.5rem;
@@ -139,7 +172,7 @@
       }
     }
   }
-} 
+}
 
 .social-links {
   display: flex;
@@ -164,7 +197,7 @@
 
     &[href*="linkedin"] {
       color: #0073b1;
-      
+
       &:hover {
         color: darken(#0073b1, 10%);
       }
@@ -178,7 +211,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #64ffda;
-  background: transparent;
+  background: #ffffff1f;
   border: 2px solid #64ffda;
   border-radius: 4px;
   cursor: pointer;
@@ -186,14 +219,23 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  
+  transition: all ease 0.3s;
+  width: 239px;
+
   .cta-icon {
     font-size: 1.2rem;
   }
-} 
+  &:active {
+    transform: scale(0.98);
+    transition: all ease 0.3s;
+  }
+}
 
 @media (max-width: 768px) {
   .hero {
     padding-top: max(4rem, env(safe-area-inset-top));
   }
-} 
+  .cta-button {
+    width: 100%;
+  }
+}

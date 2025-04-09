@@ -5,7 +5,7 @@
   position: relative;
   z-index: 1;
   overflow: visible;
-  
+
   background: linear-gradient(
     135deg,
     rgba(67, 124, 205, 0.1),
@@ -13,15 +13,15 @@
     rgba(147, 155, 255, 0.1)
   );
   border-radius: 20px;
-  
+
   .section-title {
     text-align: center;
     font-size: 2.5rem;
-     color: #ffffff;
+    color: #ffffff;
     margin-bottom: 2rem;
-    
+
     &:after {
-      content: '';
+      content: "";
       display: block;
       width: 60px;
       height: 3px;
@@ -44,9 +44,9 @@
     border-radius: 15px;
     transition: transform 0.3s ease;
     z-index: 1;
-    
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -2px;
       left: -2px;
@@ -64,17 +64,13 @@
       z-index: -1;
       animation: animate 15s linear infinite;
       background-size: 300%;
-      mask: 
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       mask-composite: exclude;
-      -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box,
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       padding: 2px;
-      box-shadow:
-        inset 0 0 15px rgba(255, 255, 255, 0.3),
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.3),
         inset 0 0 5px rgba(255, 255, 255, 0.1),
         0 0 10px rgba(255, 255, 255, 0.1);
     }
@@ -91,19 +87,20 @@
 
     .role {
       font-size: 1.1em;
-      color: #61DAFB;
+      color: #61dafb;
       margin: 0.5em 0;
       font-weight: 500;
     }
 
-    .duration, .location {
-      color: #757575;
+    .duration,
+    .location {
+      color: #c5c5c5;
       font-size: 0.95rem;
       display: inline-block;
       margin-right: 1.5rem;
-      
+
       &:before {
-        content: '•';
+        content: "•";
         margin-right: 0.5rem;
       }
     }
@@ -122,14 +119,15 @@
         opacity: 0.9;
 
         &:before {
-          content: '→';
+          content: "</>";
           position: absolute;
-          left: 0;
-          color: #61DAFB;
+          left: -10px;
+          color: #61dafb;
+          margin-right: 2px;
         }
 
         &::marker {
-          color: #61DAFB;
+          color: #61dafb;
         }
       }
     }
@@ -138,6 +136,7 @@
       display: flex;
       gap: 1rem;
       margin-top: 1rem;
+      justify-content: center;
 
       .tech-tag {
         font-size: 1.5rem;
@@ -152,12 +151,12 @@
           display: flex;
           align-items: center;
           gap: 8px;
-          
+
           svg {
             width: 20px;
             height: 20px;
           }
-          
+
           .tech-icon {
             width: 20px;
             height: 20px;
@@ -173,7 +172,7 @@
 
     .experience-card {
       padding: 1.5rem;
-      
+
       h3 {
         font-size: 1.5rem;
       }
@@ -182,7 +181,8 @@
         font-size: 1.1rem;
       }
 
-      .duration, .location {
+      .duration,
+      .location {
         display: block;
         margin-bottom: 0.5rem;
       }
@@ -193,7 +193,7 @@
 .section-title {
   color: #ffffff;
   margin-bottom: 2rem;
-} 
+}
 
 @keyframes animate {
   0% {
@@ -205,4 +205,4 @@
   100% {
     background-position: 300% 0;
   }
-} 
+}
