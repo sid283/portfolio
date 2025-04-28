@@ -234,9 +234,6 @@ textarea {
   font-size: 0.8rem;
   transform: scaleY(0);
   transition: all ease 0.3s;
-  &:last-child {
-    margin-top: -4px;
-  }
 }
 .show {
   transform: scaleY(1);
