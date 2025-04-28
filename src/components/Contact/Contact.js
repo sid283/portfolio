@@ -7,6 +7,11 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = forwardRef((props, ref) => {
   const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   useEffect(() => {
     emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -14,6 +19,42 @@ const Contact = forwardRef((props, ref) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { 0: from_name, 1: email, 2: message } = e.target;
+    let hasError = false;
+    const emailRegex = new RegExp(
+      "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$"
+    );
+
+    const error = { name: "", email: "", message: "" };
+
+    if (!from_name?.value || from_name?.value?.trim() === "") {
+      hasError = true;
+      error.name = "Please enter a name";
+    } else {
+      error.name = "";
+    }
+    if (!emailRegex.test(email?.value)) {
+      hasError = true;
+      error.email = "Please enter an email";
+    } else {
+      error.email = "";
+    }
+    if (!message?.value || message?.value.trim() === "") {
+      hasError = true;
+      error.message = "Please enter a message";
+    } else {
+      error.message = "";
+    }
+    if (hasError) {
+      setErrors(error);
+      if (window?.navigator?.vibrate) {
+        window.navigator?.vibrate(80);
+      }
+      return;
+    }
+
+    setErrors({ name: "", email: "", message: "" });
+
     setStatus("sending");
     emailjs
       .sendForm(
@@ -78,24 +119,33 @@ const Contact = forwardRef((props, ref) => {
               name="from_name"
               type="text"
               placeholder="Your Name"
-              required
+              className={`${errors?.name ? "vibrate" : ""}`}
             />
+            <p className={`error-text ${errors?.name ? "show" : ""}`}>
+              {errors.name}
+            </p>
           </div>
           <div className="form-group">
             <input
               name="email"
               type="email"
               placeholder="Your Email"
-              required
+              className={`${errors?.email ? "vibrate" : ""}`}
             />
+            <p className={`error-text ${errors?.email ? "show" : ""}`}>
+              {errors.email}
+            </p>
           </div>
           <div className="form-group">
             <textarea
               name="message"
               placeholder="Your Message"
               rows="5"
-              required
+              className={`${errors?.message ? "vibrate" : ""}`}
             />
+            <p className={`error-text ${errors?.message ? "show" : ""}`}>
+              {errors.message}
+            </p>
           </div>
           <button
             type="submit"
