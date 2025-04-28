@@ -233,7 +233,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: max(4rem, env(safe-area-inset-top));
+    padding-top: 0px;
   }
   .cta-button {
     width: 100%;
