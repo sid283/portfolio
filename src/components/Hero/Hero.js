@@ -83,7 +83,7 @@ const Hero = forwardRef((props, ref) => {
 
       {/* Add tech stack */}
       <div className="tech-stack">
-        <p>Tech I love working with:</p>
+        <p className="tech-title">Tech I love working with:</p>
         <div className="tech-icons">
           <span>
             <FontAwesomeIcon icon={faReact} />
