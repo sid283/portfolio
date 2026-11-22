@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/Hero/Hero';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
@@ -76,6 +77,7 @@ function App() {
       <section id="contact">
         <Contact ref={contactRef} />
       </section>
+      <Analytics />
     </div>
   );
 }

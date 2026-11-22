@@ -89,10 +89,10 @@ const Experience = forwardRef((props, ref) => {
       duration: "2024 - Present",
       location: "Bengaluru, India",
       responsibilities: [
-        "Migrated the TAS portal from Webpack to Vite, resulting in 60% faster local build times and a 30% reduction in initial load time, boosting developer productivity and app performance.",
-        "Initiated unit testing for the TAS portal, improving code reliability and reducing QA turnaround time by 25%.",
-        "Implemented a comprehensive Creative Preview dashboard supporting 16+ ad formats, cutting QA time by 40% and accelerating campaign validation.",
-        "Delivered advanced creatives for Amazon Prime, including a 3D swipeable carousel and a futuristic moods-based experience, leading to a 12% uplift in CTR during pilot campaigns.",
+        "Migrated a TAS portal from Webpack to Vite, resulting in 60% faster local build times and 30% reduction in initial load time, improving developer productivity and app performance.",
+        "Initiated Unit Testing for the TAS portal, enhancing code reliability and enabling faster regression detection with a 25% reduction in QA turnaround time.",
+        "Implemented a comprehensive Creative Preview dashboard supporting 16+ Ad formats, reducing QA time by 40% and enabling faster campaign validation.",
+        "Delivered 3D carousel and Expando ad creatives for Amazon Prime, Flipkart, Myntra, and other brands, achieving 2–3% CTR through interactive, multi-directional experiences.",
       ],
       technologies: [
         "React.js",
